@@ -1,0 +1,28 @@
+<template>
+    <div if:false={detail}>
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columnsDataTable}
+                hide-checkbox-column="true"
+                onrowaction={callRowAction}>
+        </lightning-datatable>
+        <div if:true={emptyMessage} class="slds-card slds-align_absolute-center" style="height: 200px;">
+            <p class="slds-text-heading_large">No hay solicitudes de escaneo pendientes.</p>
+        </div>
+    </div>
+    <div if:true={detail} class="slds-card">
+        <lightning-record-view-form
+                record-id={selectedId}
+                object-api-name={sobjectName}>
+            <template for:each={detailFields} for:item="field">
+                <lightning-output-field key={field} field-name={field}>
+                </lightning-output-field>
+            </template>
+        </lightning-record-view-form>
+        <div>
+            <lightning-button variant="brand" label="Back" title="Back" onclick ={back} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button variant="brand" label="Escaneo Interplanetario" title="Escaneo Interplanetario" onclick ={scan} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </div>
+</template>
