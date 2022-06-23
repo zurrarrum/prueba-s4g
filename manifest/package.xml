@@ -57,7 +57,7 @@
         <name>NamedCredential</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Mando</members>
         <name>CustomApplication</name>
     </types>
     <version>54.0</version>

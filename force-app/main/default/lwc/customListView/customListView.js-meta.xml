@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__Tab</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage">
+            <property name="sobjectName" type="String" />
+            <property name="fieldSetListView" type="String" />
+            <property name="fieldSetDetail" type="String" />
+            <property name="whereClausule" type="String" />
+            <property name="orderClausule" type="String" />
+            <property name="limitClausule" type="String" />
+            <property name="platformEventName" type="String" />
+            <property name="hideButton" type="Boolean" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
